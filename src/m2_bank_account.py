@@ -117,7 +117,7 @@ def run_test_init():
         print_failure_message()
     print()
     # ---------------------------------------------------------------------
-    # TODO: 2. Add two more test cases for your Bank class below.
+    # DONE: 2. Add two more test cases for your Bank class below.
     # ---------------------------------------------------------------------
 
 # ---------------------------------------------------------------------
