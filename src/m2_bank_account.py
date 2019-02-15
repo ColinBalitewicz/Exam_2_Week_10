@@ -3,7 +3,7 @@
 # successful
 def main():
     # when you have initialized your object, use the calls below to test
-    #run_test_init()
+    run_test_init()
     #run_test_withdraw()
     return
 
@@ -17,6 +17,11 @@ class Bank(object):
     """
 
     def __init__(self, name, initial_deposit, account_number):
+        self.name=name
+        self.initial_deposit=initial_deposit
+        self.account_number=account_number
+        self.balance=initial_deposit
+
         """
         What comes in:
           -- self
