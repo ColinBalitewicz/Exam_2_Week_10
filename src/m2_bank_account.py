@@ -4,7 +4,7 @@
 def main():
     # when you have initialized your object, use the calls below to test
     run_test_init()
-    #run_test_withdraw()
+    run_test_withdraw()
     return
 
 
@@ -58,6 +58,11 @@ class Bank(object):
 
 
     def withdraw(self, amount):
+        self.balance=self.balance-amount
+        if self.balance>=0:
+             print(self.balance)
+        else:
+            print('Not enough money')
         """
         What comes in:
         -- self
@@ -117,10 +122,30 @@ def run_test_init():
 # ---------------------------------------------------------------------
 # TODO: 3. Implement your test for the withdraw method below
 # ---------------------------------------------------------------------
-def run_test_withdrawal():
+def run_test_withdraw():
 # Implement at least two tests.  Use copy and paste to speed your coding.
-    pass
+    b1 = Bank('Brackin', 10000.00, 'A1')
+#   b1.name is 'Brackin'
+#   b1.balance is 10000.00
+#   b1. account_number is 'A1'
 
+    b2 = Bank('Lovelace', 10.15, 'A2')
+#   b2.name is 'Lovelace'
+#   b2.balance is 10.15
+#   b2.account_number is 'A2'
+
+    b1.withdraw(8000)
+#   b1.name is 'Brackin'
+#   b1.balance is 2000.00
+#   b1. account_number is 'A1'
+
+    b2.withdraw(50.25)
+
+
+#   b2.name is 'Lovelace'
+#   b2.balance is 10.15 (no money is withdrawn)
+#   b2.account_number is 'A2'
+#   an error message is printed because there are insufficient funds
 
 def print_failure_message():
     print('  *** FAILED the above test. ***')
